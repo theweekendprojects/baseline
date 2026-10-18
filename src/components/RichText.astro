@@ -1,0 +1,19 @@
+---
+import { PortableText } from 'emdash/ui';
+import EditorialImage from './EditorialImage.astro';
+import PhotoGallery from './PhotoGallery.astro';
+interface Props {
+  value: any;
+  class?: string;
+  [key: string]: any;
+}
+const { value, class: className, ...attributes } = Astro.props;
+const hasWrapper = Boolean(className || Object.keys(attributes).length > 0);
+---
+{hasWrapper ? (
+  <div class:list={['flow', className]} {...attributes}>
+    <PortableText value={value} components={{ type: { image: EditorialImage, gallery: PhotoGallery } }} />
+  </div>
+) : (
+  <PortableText value={value} components={{ type: { image: EditorialImage, gallery: PhotoGallery } }} />
+)}

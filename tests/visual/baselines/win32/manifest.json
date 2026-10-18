@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "fixtureVersion": 2,
+  "playwright": "1.64.1",
+  "chromiumRevision": "1248",
+  "node": "24.21.0",
+  "platform": "win32",
+  "executionPolicy": "Local developer verification only; no push/PR/build/deployment dependency",
+  "font": "@fontsource/noto-sans@5.3.0 (latin 400/700)",
+  "capturePaintPolicy": "Screenshot-only gallery content-visibility:visible; no masks or production layout overrides",
+  "date": "2026-01-15T12:00:00.000Z",
+  "locale": "en-US",
+  "timezoneId": "UTC",
+  "colorScheme": "light",
+  "deviceScaleFactor": 1,
+  "comparison": {
+    "threshold": 0.1,
+    "maxDiffPixels": 0,
+    "animations": "disabled",
+    "caret": "hide",
+    "scale": "css"
+  },
+  "viewports": [
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "routes": [
+    {
+      "name": "home",
+      "path": "/",
+      "status": 200,
+      "heading": "Recent Posts",
+      "text": "Welcome"
+    },
+    {
+      "name": "page",
+      "path": "/about",
+      "status": 200,
+      "heading": "About",
+      "text": "This is the about page."
+    },
+    {
+      "name": "posts",
+      "path": "/posts",
+      "status": 200,
+      "heading": "Posts",
+      "text": "Welcome"
+    },
+    {
+      "name": "post",
+      "path": "/posts/welcome",
+      "status": 200,
+      "heading": "Welcome",
+      "text": "What to do next"
+    },
+    {
+      "name": "category",
+      "path": "/category/general",
+      "status": 200,
+      "heading": "General",
+      "text": "Welcome"
+    },
+    {
+      "name": "tag",
+      "path": "/tag/starter",
+      "status": 200,
+      "heading": "Tag: Starter",
+      "text": "Welcome"
+    },
+    {
+      "name": "not-found",
+      "path": "/does-not-exist-visual-fixture",
+      "status": 404,
+      "heading": "Page not found",
+      "text": "Go home"
+    },
+    {
+      "name": "styleguide",
+      "path": "/_styleguide",
+      "status": 200,
+      "heading": "Starter component styleguide",
+      "text": "Coverage and limits"
+    }
+  ],
+  "authoritative": true,
+  "files": {
+    "chromium-1440/category.png": "fac9d80c9619fa8943b313646b32fa119677e57ce6cef4ac612717950b98bba5",
+    "chromium-1440/controls-focus.png": "2504e7d38860a220686b82e082f808f74935481ee07d981fc6813c80f8ece83a",
+    "chromium-1440/controls.png": "fb8ced75579ca0960d8cced62e513fd12d68a2f4e365e3a492139c37a31ed1a4",
+    "chromium-1440/gallery-open.png": "660e49610d901962b89ea47d129b0e1bf12594a27d26ad859493722f172e6814",
+    "chromium-1440/home.png": "91b40599efe49a8f8cd673d8f690bff290de4b273744076e0c75c262564b1aea",
+    "chromium-1440/not-found.png": "a8b4fe86c00241c710f87cd823f99fafffd704b4cffe3261808e837b62c273b2",
+    "chromium-1440/page.png": "3ea3d940b25e3afbe2d83fe2f2716de06be977ca033c211c2b5a6046d0e06eef",
+    "chromium-1440/post.png": "bb0fdc2982d577485d2fcd6f80e344877ff5f036e2089201715ae32c9ad19752",
+    "chromium-1440/posts.png": "f98f43b3a5fe70a2f52dc5bf223a9fdfcfcf57e3de663f4b8928f3fbc1e862d7",
+    "chromium-1440/sensitivity-control.png": "fb8ced75579ca0960d8cced62e513fd12d68a2f4e365e3a492139c37a31ed1a4",
+    "chromium-1440/styleguide-no-js.png": "f64a2e45856346cc822c1a23f9d2cc10b1d79133fdb8ebe4fe2c44c99c16091a",
+    "chromium-1440/styleguide.png": "41ed458f43e47048427952f77516c8c9a1a1ad9325b303371a486c42a54c4e67",
+    "chromium-1440/tag.png": "3e267aeabadeb689cd6788a97e94838151d742384bdf3917f72d320483bd4ff2",
+    "chromium-1440/ticker-active.png": "bb6a4cb3c0a57c3e47074a9767fa1abb2a67c7bf30a8ce562f3c63da2f620b53",
+    "chromium-1440/ticker-reduced.png": "bf486293e4e7c36235775425ab59c5b1140b05de364499f035203a62f4f5f445",
+    "chromium-1440/ticker-rtl.png": "61d0f04d302e044cf3cad5908ce7320b803dddfe26e42fca8626434ba7f94eba",
+    "chromium-1440/zoom-200.png": "54fafcc9fba23b71302d4012bbac7903937948bf8eb9adae8fe27f80f596fd65",
+    "chromium-1440/zoom-400.png": "71b2baed6a780139c4d83914f510f8d6bced32bc4378a675c2966af09cf00c0d",
+    "chromium-390/category.png": "f76677163d76756c656e48a74d6dcc7cddb5b681c8c27fe3cdba1c8cad803118",
+    "chromium-390/controls-focus.png": "4f286289253662e9f26d2ffc4af3647335b542b04fa7f8674d6278a7c502e9dc",
+    "chromium-390/controls.png": "698839d5a5db0b8564211417d5eae839b6943de305c2dc0f2edff4af6dda0a1a",
+    "chromium-390/gallery-open.png": "d1acf2877d8f7c5783675e3f3f643313b1cebad1eccfc7a43cfb80ba30be6165",
+    "chromium-390/home.png": "3b9e3b7d523a51f9df6c6de3432499c70c3cd0f4b7c3d88dc38a31244774a78f",
+    "chromium-390/not-found.png": "a50bdcf11bc1223ea69418d2fbedd246fd6a2aeb0a98291af869844304a852bd",
+    "chromium-390/page.png": "937be625dba82748498e77d7e820c3d68c6299046e16578de64414f2af960995",
+    "chromium-390/post.png": "9e5020fe5bdd3d242d1b38c497e68dd941e7a2908388ccf7cde8192f07030680",
+    "chromium-390/posts.png": "16499f553c37d75e2722d750e28a9fb598931375703e9f10f6110805b431e129",
+    "chromium-390/sensitivity-control.png": "698839d5a5db0b8564211417d5eae839b6943de305c2dc0f2edff4af6dda0a1a",
+    "chromium-390/styleguide-no-js.png": "029bf025bae88d7aa8dad64b39b50ff67935b85f2018a9cccc7abc1c5262a4a1",
+    "chromium-390/styleguide.png": "c2341426422c2da8dc5d150662c24944e921ce7fe95e4fbaf383d076adc27de0",
+    "chromium-390/tag.png": "2833a1d32b93484f74d4233880334f913b30a852904e7280812a5ae3dab6f4d4",
+    "chromium-390/text-spacing-320.png": "b219ded39bf847bd997c187304181ab60418bfecbbf2b4ee649298382f7e2106",
+    "chromium-390/ticker-active.png": "62b2aed25ffa51170b9eb43a1cc886b75dfa556137fea1ceb47e6cccf72d98ec",
+    "chromium-390/ticker-reduced.png": "b5a3467c2c54316771cd1bf267df510edcf0924756397c83c1432bcca0be618c",
+    "chromium-390/ticker-rtl.png": "7291a2f3354162a76ec2b059ea5be7f666bf9cbd66450722c24c82867209348c",
+    "chromium-768/category.png": "2939470403fab5287993bff5db909415a859219e1be994631d7709d6757ac035",
+    "chromium-768/controls-focus.png": "cfc74ce7379559a52335cc9c81c97cd8e4b6b8b63654d36412e57f7f8f66c94d",
+    "chromium-768/controls.png": "acc26b8ddc77785ecc4f31bd0dd667f26be3ff9ddea5a419c040c4e3be7da70a",
+    "chromium-768/gallery-open.png": "53e0a792fd10551743e6aafa09378cca1ab637d084748cc652204130c44eeeb6",
+    "chromium-768/home.png": "b0118930e502f646201598c153e560baaa14be6bd8312c11037be51bb1c361c4",
+    "chromium-768/not-found.png": "c97b7413d1a35506937fe784f8a605c599cf41e4447aee909c012f8513db59d0",
+    "chromium-768/page.png": "f6f916436eca54d9a01d81a38412c2c46d32a71b61fd5acbd85e72bf6bce1dc9",
+    "chromium-768/post.png": "e024cee1e8384266f0e156fb9aa49f7fa850a5619d5d4047d9965bfa24c2eccc",
+    "chromium-768/posts.png": "b92cab40041c5320d67ecf92f2bb574322694e66810da3e6d61748245d786234",
+    "chromium-768/sensitivity-control.png": "acc26b8ddc77785ecc4f31bd0dd667f26be3ff9ddea5a419c040c4e3be7da70a",
+    "chromium-768/styleguide-no-js.png": "b58e72c4e88d5908ff7101fb713f4f7d9970a8150b54e94b39dbbae8c5b6221e",
+    "chromium-768/styleguide.png": "365b8645a52a8196a7f39e475a588dda8fe775878e34a4eb074f0e15163fcf67",
+    "chromium-768/tag.png": "4aeaa91969f49f5937b9e6dccae754ca468bdb573926458d8ee15e97f5b14db3",
+    "chromium-768/ticker-active.png": "46fdd02f9c4fedbf33114e381f830e4ad34beb9e37efb33e4361c27cffa3e630",
+    "chromium-768/ticker-reduced.png": "a0cd0b6aaf72d589d6f5545887693d710385fbb6f8b95ff499a5b772c1bd0953",
+    "chromium-768/ticker-rtl.png": "267f7f87dec05a8b1bd483d7584d0a562c735a8e79b2137727c31000c8c316bb"
+  }
+}

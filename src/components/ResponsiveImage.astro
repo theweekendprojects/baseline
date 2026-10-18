@@ -1,0 +1,39 @@
+---
+import { getImage } from 'astro:assets';
+import { responsiveImageInput, type ResponsiveImageProps } from '../lib/responsive-image';
+type Props = ResponsiveImageProps;
+const { src, alt, sizes = '(max-width: 60rem) calc(100vw - 4rem), 800px', loading = 'lazy', fetchpriority, class: className, width, height, optimize = true, originalSrc } = Astro.props;
+const image = responsiveImageInput(src, width, height);
+const original = originalSrc ?? image.original;
+const { nativeWidth, nativeHeight } = image;
+let optimized;
+if (optimize && nativeWidth && nativeHeight && image.widths.length) {
+  try {
+    optimized = await getImage({
+      src: image.src,
+      width: Math.min(800, nativeWidth),
+      height: Math.round(Math.min(800, nativeWidth) * nativeHeight / nativeWidth),
+      widths: image.widths,
+      sizes, layout: 'none', format: 'webp', quality: 90, fit: 'contain',
+    });
+    if (optimized.src === image.original) optimized = undefined;
+  } catch { /* Keep the original when its source cannot be processed. */ }
+}
+---
+<img class={className} style={image.nativeWidth ? `--image-native-width: ${image.nativeWidth}px` : undefined} src={optimized?.src || original} data-original-src={original} srcset={optimized?.srcSet.attribute} sizes={optimized ? sizes : undefined} alt={alt} width={image.width} height={image.height} loading={loading} fetchpriority={fetchpriority} decoding="async" />
+<script>
+  // Recover from an unavailable image service (including transformation limits).
+  function recoverImage(image: EventTarget | null) {
+    if (!(image instanceof HTMLImageElement)) return;
+    const original = image.dataset.originalSrc;
+    if (!original || image.src === new URL(original, document.baseURI).href) return;
+    image.removeAttribute('srcset');
+    image.removeAttribute('sizes');
+    image.src = original;
+  }
+  document.addEventListener('error', event => recoverImage(event.target), true);
+  // An eager image can fail before this module loads.
+  document.querySelectorAll<HTMLImageElement>('img[data-original-src]').forEach(image => {
+    if (image.complete && image.naturalWidth === 0 && image.currentSrc) recoverImage(image);
+  });
+</script>
